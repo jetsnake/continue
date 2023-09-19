@@ -331,25 +331,13 @@
         },
         "allow_anonymous_telemetry": {
           "title": "Allow Anonymous Telemetry",
-          "default": true,
+          "default": false,
           "type": "boolean"
         },
         "models": {
           "title": "Models",
           "default": {
-            "default": {
-              "requires_api_key": null,
-              "requires_unique_id": true,
-              "requires_write_log": true,
-              "system_message": null,
-              "model": "gpt-4",
-              "api_key": null,
-              "llm": null,
-              "name": null,
-              "class_name": "MaybeProxyOpenAI"
-            },
-            "small": null,
-            "medium": {
+            "default":  {
               "requires_api_key": null,
               "requires_unique_id": true,
               "requires_write_log": true,
@@ -360,6 +348,8 @@
               "name": null,
               "class_name": "MaybeProxyOpenAI"
             },
+            "small": null,
+            "medium": null,
             "large": null,
             "edit": null,
             "chat": null

@@ -43,13 +43,12 @@ class ContinueConfig(BaseModel):
         description="Steps that are not allowed to be run, and will be skipped if attempted",
     )
     allow_anonymous_telemetry: Optional[bool] = Field(
-        True,
+        False,
         description="If this field is set to True, we will collect anonymous telemetry as described in the documentation page on telemetry. If set to False, we will not collect any data.",
     )
     models: Models = Field(
         Models(
-            default=MaybeProxyOpenAI(model="gpt-4"),
-            medium=MaybeProxyOpenAI(model="gpt-3.5-turbo"),
+            default=MaybeProxyOpenAI(model="gpt-3.5-turbo"),
         ),
         description="Configuration for the models used by Continue. Read more about how to configure models in the documentation.",
     )

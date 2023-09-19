@@ -23,10 +23,9 @@ from continuedev.src.continuedev.plugins.context_providers.url import URLContext
 from continuedev.src.continuedev.plugins.context_providers.terminal import TerminalContextProvider
 
 config = ContinueConfig(
-    allow_anonymous_telemetry=True,
+    allow_anonymous_telemetry=False,
     models=Models(
-        default=MaybeProxyOpenAI(api_key="", model="gpt-4"),
-        medium=MaybeProxyOpenAI(api_key="", model="gpt-3.5-turbo")
+        default=MaybeProxyOpenAI(api_key="", model="gpt-3.5-turbo")
     ),
     system_message=None,
     temperature=0.5,
